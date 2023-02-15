@@ -72,13 +72,13 @@ const putCaracter = (id) => {
     if (togglePlayer) {
       togglePlayer = false;
       element.innerHTML = "X";
-      header.innerHTML = "Vez do jogador y";
+      header.innerHTML = "Vez do jogador 2";
       return element.innerHTML;
     }
     if (!togglePlayer) {
       togglePlayer = true;
       element.innerHTML = "O";
-      header.innerHTML = "Vez do jogador x";
+      header.innerHTML = "Vez do jogador 1";
       return element.innerHTML;
     }
   }
@@ -93,7 +93,7 @@ const clearTable = () => {
 const resetGame = () => {
   clearTable();
   togglePlayer = true;
-  header.innerHTML = "Vez do jogador x";
+  header.innerHTML = "Jogo iniciado";
 };
 
 const getId = (number) => {
