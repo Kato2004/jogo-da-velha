@@ -53,3 +53,17 @@ footer {
   margin: 0 auto;
   color: #c8c8c8;
 }
+
+.btn-restart {
+  border: none;
+  position: absolute;
+  right: 7rem;
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  background-color: #c8c8c8;
+  border-radius: 5px;
+}
+
+.btn-restart:hover {
+  background-color: #888;
+}

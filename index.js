@@ -1,4 +1,5 @@
 const header = document.getElementById("header");
+const btnReload = document.getElementById("btn-reload");
 let elements = [];
 for (let i = 1; i < 10; i++) {
   elements.push(document.getElementById(i));
@@ -103,4 +104,6 @@ const getId = (number) => {
   verifyDraw();
 };
 
-//105
+btnReload.addEventListener("click", () => {
+  location.reload();
+});
