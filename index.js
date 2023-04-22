@@ -57,11 +57,8 @@ const verifyPositionsO = () => {
   elementVerifyO(elements[6], elements[7], elements[8]);
 };
 const verifyDraw = () => {
-  if (
-    elements.every((element) => {
-      return element.innerHTML !== "";
-    }) === true
-  ) {
+  const isDraw = elements.every((element) => element.innerHTML !== "");
+  if (isDraw) {
     alert(`O jogo deu empate, clique em OK para recomeçar`);
     resetGame();
   }
@@ -69,16 +66,18 @@ const verifyDraw = () => {
 
 const putCaracter = (id) => {
   const element = document.getElementById(id);
-  if (element.innerHTML == "") {
+  if (element.innerHTML === "") {
     if (togglePlayer) {
       togglePlayer = false;
       element.innerHTML = "X";
+      element.classList.add("letter");
       header.innerHTML = "Vez do jogador 2";
       return element.innerHTML;
     }
     if (!togglePlayer) {
       togglePlayer = true;
       element.innerHTML = "O";
+      element.classList.add("letter");
       header.innerHTML = "Vez do jogador 1";
       return element.innerHTML;
     }
@@ -88,6 +87,7 @@ const putCaracter = (id) => {
 const clearTable = () => {
   elements.forEach((element) => {
     element.innerHTML = "";
+    element.classList.remove("letter");
   });
 };
 
